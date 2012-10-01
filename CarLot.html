@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+	<title>The Garage</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	
+<div class="CarSlot" id="Toyota">
+	<img src="http://www.ayulimousine.com/images/camry-silver.jpg">
+	<div class="info">
+		<h3>Toyota Camry</h3>
+		<p class="Make">Toyota</p>
+		<p class="Model">Camry</p>
+		<p class="Year">2005</p>
+		<p>
+			<a href="#" class="favorite">Add to Favorites</a>
+		</p>
+		<p>
+			<a href="#" class="DisplayName">Display Name</a>
+		</p>
+		<p>
+			<a href="#" class="LogYear">Log Year</a>
+		</p>
+	</div>
+</div>
+<div class="CarSlot" id="Honda">
+	<img src="http://static.cargurus.com/images/site/2008/02/18/20/49/1993_honda_accord_2_dr_lx_coupe-pic-39058.jpeg">
+	<div class="info">
+		<h3>Honda Accord</h3>
+		<p class="Make">Honda</p>
+		<p class="Model">Accord</p>
+		<p class="Year">1993</p>
+		<p>
+			<a href="#" class="favorite">Add to Favorites</a>
+		</p>
+		<p>
+			<a href="#" class="DisplayName">Display Name</a>
+		</p>
+		<p>
+			<a href="#" class="LogYear">Log Year</a>
+		</p>
+	</div>
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="Car.js"></script>
+<script>
+	(function() {
+		var ToyotaCamry = new Car({
+			make: 'Toyota',
+			model: 'Camry',
+			year: '2005',
+			el: '#Toyota'
+		});
+		var HondaAccord = new Car({
+			make: 'Honda',
+			model: 'Accord',
+			year: '1993',
+			el: '#Honda'
+		});
+	})();
+</script>
+
+</body>
+</html>
+
