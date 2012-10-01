@@ -29,6 +29,11 @@ Car.prototype = {
 			that.LogYear();
 			e.preventDefault();
 		});
+		this.$el.on('click', '.Hide', function(e) {
+			// in this callback function, this refers to the a.favorite element that was clicked
+			that.Hide();
+			e.preventDefault();
+		});
 	},
 
 	DisplayName: function(){
@@ -42,6 +47,10 @@ Car.prototype = {
 	favorite: function() {
 		this.$el.find('.favorite').replaceWith('<span>Favorited!</span>');
 		console.log(this.model + ' favorited');
+	},
+
+	Hide: function(){
+		this.$el.hide(300);
 	}
 
 }
